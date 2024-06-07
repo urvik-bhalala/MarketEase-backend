@@ -24,6 +24,10 @@ app.use(cors());
 
 setupDB();
 require('./config/passport')(app);
+
+app.get("/", (req, res) => {
+  res.send("Server is up!");
+})
 app.use(routes);
 
 const server = app.listen(port, () => {

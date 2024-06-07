@@ -1,16 +1,16 @@
 module.exports = {
   app: {
-    name: 'Mern Ecommerce',
+    name: 'MarketEase',
     apiURL: `${process.env.BASE_API_URL}`,
     clientURL: process.env.CLIENT_URL
   },
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 8000,
   database: {
-    url: process.env.MONGO_URI
+    url: `${process.env.MONGO_URI}/${process.env.DB}`
   },
   jwt: {
     secret: process.env.JWT_SECRET,
-    tokenLife: '7d'
+    tokenLife: '30d'
   },
   mailchimp: {
     key: process.env.MAILCHIMP_KEY,
